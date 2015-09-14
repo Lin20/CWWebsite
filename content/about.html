@@ -1,0 +1,66 @@
+<h1>About</h1><div id="preview_game" style="padding:20px">
+<p>Codename::World is a project of mine that I've been dreaming of making for years. It's my life project. Anyways, it's a freeform mesh-based voxel game and plans on making <strong>everything</strong> changeable by the player. In my opinion, the biggest downfall Minecraft, Terraria, Starbound, Grand Theft Auto, etc. is the limits they impose. In fact, that's my problem with all video games. There's too much useless visual content and world objects that vary only visually, and it's hard to get immersed in a paper world. I've spent the past few years devising a way to change all that.</p>
+
+<h2><span style="color: green;"><span><strong><span style="text-decoration: underline;">Implemented Features</span></strong></span></span></h2><br />
+<ul><li><span style="color: green;">Programmed in native C++ using raw DirectX 10</span></li><br />
+<li><span style="color: green;">Dynamic mesh generation on <strong>CPU</strong> with multithreading support and <strong>GPU</strong> using geometry shader</span></li><br />
+<li><span style="color: green;">Infinite multi-threaded world loading</span></li><br />
+<li><span style="color: green;">Adding/removing mesh</span></li><br />
+<li><span style="color: green;">Blocky or smooth shading</span></li><br />
+<li><span style="color: green;">Skylight</span></li><br />
+<li><span style="color: green;">Point lights</span></li><br />
+<li><span style="color: green;">Colored lighting</span></li><br />
+<li><span style="color: green;">Day/night cycling</span></li><br />
+<li><span style="color: green;">Light updating with mesh modifying</span></li><br />
+<li><span style="color: green;">Element-based materials</span></li><br />
+<li><span style="color: green;">Variable world data formats (necessary with memory constraints)</span></li><br />
+<li><span style="color: green;">Bigger optimizing on world loading and lighting</span></li><br />
+<li><span style="color: green;">Finite fluids</span></li><br />
+<li><span style="color: green;">Fluid Eye candy shaders</span></li></ul><br />
+
+<h2><span style="color: orange;"><span><strong><span style="text-decoration: underline;">Planned Major Playable Features (see below for more details on each)</span></strong></span></span></h2><br />
+<ul><li><span style="color: orange;">Planets & finite generation</span></li><br />
+<li><span style="color: orange;">Devices</span></li><br />
+<li><span style="color: orange;">Organic DNA-based planetary life (plants & creatures)</span></li><br />
+<li><span style="color: orange;">Weather</span></li><br />
+<li><span style="color: orange;">More REALLY cool stuff, but I want some stuff to be a surprise :)</span></li></ul><br />
+
+<h2><span style="color: red;"><span><strong><span style="text-decoration: underline;">Planned Technical Features</span></strong></span></span></h2><br />
+<ul><li><span style="color: red;">Linux/Mac, OpenGL, and DirectX 9/12 support (IA pipeline stage and CPU-GPU commands are currently some of the biggest bottlenecks. DirectX 12, OpenGL 5 and Mantle would GREATLY improve performance)</span></li><br />
+<li><span style="color: red;">More eye-candy (fancy shaders)</span></li><br />
+<li><span style="color: red;">World "models" (aka spots in the terrain that require sub-sampling)</span></li><br />
+<li><span style="color: red;">Everything necessary for entities & animated models</span></li><br />
+<li><span style="color: red;">Physics</span></li><br />
+<li><span style="color: red;">Multiplayer</span></li><br />
+<li><span style="color: red;">World saving</span></li><br />
+<li><span style="color: red;">Camera targets & full input customization</span></li></ul><br />
+
+<h2><span style="color: blue;"><span><strong><span style="text-decoration: underline;">Things I'd Love to Implement but Would be Very Challenging, so We'll See One Day</span></strong></span></span></h2><br />
+<ul><li><span style="color: blue;">Ship building & Space (flying to randomly-generated planets)</span></li><br />
+<li><span style="color: blue;">Level-of-detail terrain (very complicated with dynamic marching cubes)</span></li><br />
+<li><span style="color: blue;">Shrinking to travel and modify the world in a 1/16 scale</span></li></ul><br />
+
+<h2><span style="color: purple;"><strong><span style="text-decoration: underline;">Major Feature Details</span></strong></span></h2>
+
+<div style="margin:0 20px"><p><h3><span style="color: purple;"><span><strong><span style="text-decoration: underline;">Planets & Finite Generation</span></strong></span></span></h3><br />
+<p style="margin:0 20px">This is kind of self-explanatory, but worlds will consist of randomly generated planets. Everything inside of them will be different - how harsh the terrain is, what the terrain is made out of, how intense the skylight is (if there is a sun), the sky(light) color, the resources you can find inside of it, the type of organic life on the planet, the atmosphere and weather, and more. Until I (if I even) implement space and traveling to planets that way, you will be able to generate portals to planets and customize their "ingredients". This means you feed the portal or whatever objects, it breaks the objects into their materials, it breaks down the materials into their elements, and changes the planet's properties accordingly. Such properties include the amount of organic life on the planet, the type of organic life, the amounts of specific elements, how deep the caves will be, what kinds of resources will be obtainable, etc. I believe this will be the most important to keep the game fresh and exploring fun.</p>
+
+<p><h3><span style="color: purple;"><span><strong><span style="text-decoration: underline;">Devices</span></strong></span></span></h3><br />
+<p style="margin:0 20px">A big chunk of the fun of the game is everything will run on little devices. Your tools, creatures, and whatever you want to build to get things done automatically or use logic. In fact, I've built a prototype of how it will work! There will be two different types of components - logic and outer-world. Logic components will do things like split an electrical signal in two, do math, etc... in the circuit. Outer-world components interact with the world outside the device. Feed signals to activate them, etc. If it's worth anything, I have quite a few credits in electrical engineering so this should make things logical and (hopefully) fun.</p>
+<p style="margin:0 20px"><iframe width="560" height="315" src="https://www.youtube.com/embed/1MP7j8_7YdE" frameborder="0" allowfullscreen></iframe></p><br/>
+
+<h3><span style="color: purple;"><span><strong><span style="text-decoration: underline;">Organic DNA-based planetary life (plants & creatures)</span></strong></span></span></h3><br />
+<p style="margin:0 20px">One of my favorite parts of the game, plants and creatures will have their genes generated randomly, and their resulting mesh (and behavior) depends on those genes. So at a certain point in the game, you'll be able to capture an organism's DNA and modify it to clone your own. Let's look at plants and creatures individually:</p>
+<ul style="margin:0 20px"><li>Plants - Plants will be a part of the terrain and their mesh will be generated using sub-sampling. The materials in the mesh, how small the mesh is, and the way the mesh grows will all be determined by their genes. Obviously, plants will need specific resources to grow. Sunlight, water-type material (materials will all be randomly generated, so for clarification, read below)</li>
+
+<p><li>Creatures - Creatures will follow a specific format and won't have to be like animals/humans as we know them. They can take on any shape, as their genes will decide (similar to plants). They will have different pieces (like limbs) connects together with a specific "life" element. Life elements are the heart and soul of a creature, and limbs will need these connected to function. The coolest part here is damaging a creature will actually break apart the mesh, so for example, shooting an enemy will actually create a hole. Breaking apart the "life" element will cause the limbs to break off completely. I plan on making creatures controlled by devices, so there will be pre-defined and growing behavior for enemies that runs off of customizable devices. I'd like to have damaging enemies tinker with their devices, so over time, hurting an enemy will break its logic and behavior so it will glitch out.</li></p></ul>
+
+<p><h3><span style="color: purple;"><span><strong><span style="text-decoration: underline;">Element-Based Materials</span></strong></span></span></h3><br />
+<p style="margin:0 20px">The biggest problem with creating a sandbox game and a list of the materials you can use is that at some point, the player will have experimented with all of the materials. Players then have to depend on updates or mods if their creativity runs dry, and even then the problem still persists. That is why every single piece of the world will be made up of elements or element-based materials. Well, what are elements then? Think of real life elements. You've got your periodic table that lists them, their "natural" states, and how stable they are. Well,  that's pretty much what this game's elements are. You've got a bunch of elements that make up the universe, and then you can mix and match them to create materials! The elements decide what the textures look like, meaning that textures are generated on-the-fly with an unlimited-scale resolution. Playing the game in 21XX? No problem, crank the texture resolution to 4096x4096 and watch as the the textures don't suffer from up-stretching. Each element contains over 50 visual properties and over 70 behavioral ones, such as luminance, opacity and liquidity. This makes for literally infinite possibilities for planetary generation and player customization! The best part is that if you look at the feature list, they're already implemented. I've also created the algorithm for making planets automatically pick and choose, and even fuse, what elements to put where to allow for natural and exotic terrain, resource placement and scarcity, and other challenges. The elements list can be totally different each time too!</p>
+
+<p><h3><span style="color: purple;"><span><strong><span style="text-decoration: underline;">Weather</span></strong></span></span></h3><br />
+<p style="margin:0 20px">This one is kind of self-explanatory, but there will be dynamic planet-based weather. Clouds will generate over time and eventually cause rain once they are thick enough. Storms and other natural disasters will stem from this as well, since any extra challenge that you can build a defense for adds so much to a game.</div></p>
+
+<h1><span style="color: black;"><span><strong><span style="text-decoration: underline;">How Can You Help?</span></strong></span></span></h1>
+<p style="margin:0 20px">I'm glad you asked! The biggest thing you can do is <span><strong><span style="text-decoration: underline;">SHARE</span></strong></span> the project! Share videos, screenshots, forum posts, anything. <strong>Please.</strong> I desperately need people to spread this around. <span style="color: green;"><strong>I will be launching a low-goal Kickstarter for this project one day, so please consider supporting me then too by donating and/or sharing.</strong></span> Thank you! :)</p>
+</div>

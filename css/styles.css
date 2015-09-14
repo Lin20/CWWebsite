@@ -1,0 +1,368 @@
+/*Eric Meyer's Reset CSS v2.0 - http://cssreset.com*/
+HTML, BODY, DIV, SPAN, APPLET, OBJECT, IFRAME, H1, H2, H3, H4, H5, H6, P, BLOCKQUOTE, PRE, A, ABBR, ACRONYM, ADDRESS, BIG, CITE, CODE, DEL, DFN, EM, IMG, INS, KBD, Q, S, SAMP, SMALL, STRIKE, STRONG, SUB, SUP, TT, VAR, B, U, I, CENTER, DL, DT, DD, OL, UL, LI, FIELDSET, FORM, LABEL, LEGEND, TABLE, CAPTION, TBODY, TFOOT, THEAD, TR, TH, TD, ARTICLE, ASIDE, CANVAS, DETAILS, EMBED, FIGURE, FIGCAPTION, FOOTER, HEADER, HGROUP, MENU, NAV, OUTPUT, RUBY, SECTION, SUMMARY, TIME, MARK, AUDIO, VIDEO
+{
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+}
+ARTICLE, ASIDE, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, MENU, NAV, SECTION
+{
+	display: block;
+}
+BLOCKQUOTE, Q
+{
+	quotes: none;
+}
+BLOCKQUOTE:before, BLOCKQUOTE:after, Q:before, Q:after
+{
+	content: none;
+}
+TABLE
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+H1
+{
+	color: #606060;
+	font-size: 36px;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	padding: 10px 0;
+}
+H2
+{
+	color: #606060;
+	font-size: 28px;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	padding: 10px 0;
+}
+BODY
+{
+	background-color: #E8F2FF;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	line-height: 1;
+}
+P
+{
+	padding: 10px 0;
+	line-height: 120%;
+}
+ul
+{
+}
+a
+{
+	color: #666;
+	text-decoration: none;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+a:hover
+{
+	color: #0088D5;
+}
+.active, .active_nav
+{
+	color: #101010;
+}
+.active_nav
+{
+	border-bottom: 2px solid #0088D5;
+}
+a.inactive_nav
+{
+	border-bottom: 2px solid rgba(192, 224, 255, 0);
+}
+a.inactive_nav:hover
+{
+	border-bottom-color: rgba(192, 224, 255, 1);
+}
+
+STRONG
+{
+	font-weight: bold;
+}
+I
+{
+	font-style: italic;
+}
+#wrapper
+{
+	width: 980px;
+	margin: 10px auto;
+	padding: 0 0px;
+	background-color: #fff;
+	border: 1px solid #0088D5;
+	border-radius: 4px;
+}
+#banner
+{
+	overflow: auto;
+	border-bottom: 1px solid #B0B0B0;
+	padding: 0px 20px;
+}
+#logo
+{
+	margin: 15px 0 0px 20px;
+	padding-top: 10px;
+	float: left;
+}
+#nav
+{
+	float: right;
+	padding: 50px 0px 0px 0px;
+}
+#nav UL LI
+{
+	list-style-type: none;
+	display: inline;
+	margin: 0 20px 0 -5px;
+	list-style: none;
+}
+#nav A
+{
+	font-size: 16px;
+}
+
+#main_area
+{
+	display:block;
+	clear:both;
+	overflow: auto;
+	position:relative;
+	height: 100%;
+	min-height:535px;
+	background-color: #f4f4ff;
+}
+#content
+{
+	padding: 20px 40px 20px 40px;
+	width: 68.4%;
+	position: relative;
+	float: left;
+	height: 100%;
+}
+.announcements
+{
+	float: left;
+	height: 35px;
+	width: 60%;
+	padding: 10px 20px;
+	background-color: #fff;
+	border-bottom: 1px solid #b0b0b0;
+	border-left: 1px solid #b0b0b0;
+	border-right: 1px solid #b0b0b0;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	text-align: center;
+	line-height: 100%;
+	display: table;
+	margin-left: 6.1%;
+}
+.announcements:hover
+{
+	border-color: #0088D5;
+}
+.quotes
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#sidebar
+{
+	border-left: 1px solid #B0B0B0;
+	width: 23.5%;
+	height: 100%;
+	overflow:auto;
+	position:absolute;
+	right: 0;
+	background-color: #fff;
+}
+#sidebar_content
+{
+	padding: 10px 0px 10px 10px;
+	overflow: auto;
+	height: auto;
+}
+#latest_screenshot
+{
+	overflow: auto;
+	margin-bottom: 0px;
+}
+#latest_screenshot > #preview_screenshot, #preview_screenshot
+{
+	font-size: 16px;
+	color: #606060;
+	float: left;
+	margin-right: -20px;
+	height: auto;
+}
+.twitter-timeline
+{
+	float: left;
+	clear: both;
+}
+#social_media
+{
+	float: left;
+	clear: both;
+	margin-top: 10px;
+	margin: 10px 10px 0px 10px;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+}
+
+#footer
+{
+	padding: 20px 40px;
+	margin: 0px 0;
+	border-top: 1px solid #B0B0B0;
+	clear: both;
+}
+
+#post_post, #mceu_13
+{
+	width: 95%;
+	margin: 0 10px;
+}
+#post_password
+{
+	width: 84.5%;
+	margin: 0 10px;
+}
+#post_submit
+{
+	padding: 0;
+}
+#new_post
+{
+	overflow: auto;
+}
+.fixed
+{
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+}
+#preview_game, #preview_news
+{
+	border-radius: 4px;
+	//-moz-border-radius: 1px;
+	//-webkit-border-radius: 1px;
+	//-webkit-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75);
+	//-moz-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75);
+	//box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+	border: 1px solid #bbb;
+	padding: 10px;
+	margin: 10px;
+	background-color: #fff;
+	overflow: auto;
+}
+#preview_game ul, #preview_news ul
+{
+	padding: 0px 10px 10px 25px;
+	line-height: 120%;
+}
+#preview_game li, #preview_news li
+{
+	padding-top: 4px;
+}
+#preview_news
+{
+	//background-color: #FFD6D6;
+}
+#preview_game:hover, #preview_news:hover
+{
+	//background-color: #F0F0FF;
+	border: 1px solid #0088D5;
+}
+
+#preview_screenshot
+{
+	width: 192px;
+	height: 108px;
+	border: 1px solid #606060;
+	margin: 10px;
+	float: left;
+}
+
+#preview_screenshot:hover
+{
+	border-color: #0088D5;
+}
+
+#content_break
+{
+	border-bottom: 1px solid #ddd;
+	height: 1px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#page_break
+{
+	margin: 20px 0;
+	border-bottom: 1px solid #B0B0B0;
+}
+
+.date_tag
+{
+	float: left;
+	clear: both;
+	width: 100%;
+	border-bottom: 1px solid #B0B0B0;
+	margin-bottom: 8px;
+	font-size: 28px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	padding: 10px 0;
+}
+
+#sortby
+{
+	float:right;
+	margin: 25px 4px 0px 0px;
+	color: #606060;
+}
+
+#post_text
+{
+	padding: 1px 10px;
+	margin: 0px 10px;
+}
+
+#post_title
+{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+}
+
+#post_summary
+{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 120%;
+	margin-bottom: 15px;
+	color: #777;
+}
+
+#post_thumb
+{
+	width: 240px;
+	height: 135px;
+	margin: 2px 10px 2px 15px;
+	float:left;
+	border:1px solid #202020;
+}
+
+#irc_info
+{
+	margin-bottom: 10px;
+	line-height: 120%;
+}
